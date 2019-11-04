@@ -1,5 +1,6 @@
 /* eslint-disable comma-dangle */
 import React from "react";
+import { Button } from "react-materialize";
 import NewRestaurantForm from "./NewRestaurantForm";
 import RestaurantList from "./RestaurantList";
 
@@ -23,12 +24,12 @@ class RestaurnatListPage extends React.Component {
 
     return (
       <div>
-        <button
+        <Button
           data-test="addRestaurantButton"
           onClick={this.handleShowRestaurantForm}
         >
           Add Reataurant
-        </button>
+        </Button>
         {showNewRestaurantForm ? (
           <NewRestaurantForm onSave={this.handleAddRestaurant} />
         ) : null}

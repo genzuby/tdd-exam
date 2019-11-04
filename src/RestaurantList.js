@@ -1,12 +1,13 @@
 import React from "react";
+import { Collection, CollectionItem } from "react-materialize";
 
 const RestaurantList = ({ restaurantsName }) => {
   return (
-    <ul>
+    <Collection>
       {restaurantsName.map((restau, i) => {
-        return <li key={i}>{restau}</li>;
+        return <CollectionItem key={i}>{restau}</CollectionItem>;
       })}
-    </ul>
+    </Collection>
   );
 };
 
