@@ -12,10 +12,12 @@ describe("New restaurant Component", () => {
       const wrapper = mount(<NewRestaurantForm onSave={saveHandler} />);
 
       wrapper
-        .find('[data-test="newRestaurantName"]')
+        .find('input[data-test="newRestaurantName"]')
         .simulate("change", { target: { value: "coffee" } });
 
-      wrapper.find('[data-test="saveNewRestaurantButton"]').simulate("click");
+      wrapper
+        .find('button[data-test="saveNewRestaurantButton"]')
+        .simulate("click");
 
       expect(saveHandler).toHaveBeenCalledWith("coffee");
     });
